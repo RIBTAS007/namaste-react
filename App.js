@@ -4,7 +4,7 @@
 
 // the {} things are passed as props.
 
-// reactElement(object) => HTMLAllCollection(browser understands)
+// reactElement(object) => HTML(browser understands)
 
 const heading = React.createElement(
   "h1",
