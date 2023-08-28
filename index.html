@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning React</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
 
-    <!-- writing hello world in html -->
-    <div id="root1">
-        <h1>Hello world!</h1>
-    </div>
+    <!-- "Cross-origin" refers to accessing resources from different websites. 
+    "Crossorigin" attribute in HTML specifies how browsers handle such requests securely. -->
+    
+    <!-- the first script file contains the core react dev code  -->
+    <!-- the second file is for dom operations -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
 
-    <!-- writing hello world using javascript -->
-    <div id="root">
-
-    </div>
-    <script>
-        const heading = document.createElement("h1");
-        heading.innerHTML="Hello World from Javascript";
-
-        const root = document.getElementById("root");
-        root.appendChild(heading); 
-        // we will add heading inside the root using the above line 
+    <!-- printing hellow world using react  -->
+    <script src="./App.js">
+         
     </script>
-</body>
+  </body>
 </html>
