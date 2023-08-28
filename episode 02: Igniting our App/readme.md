@@ -57,5 +57,49 @@ We can use **npm install** to regenerate all the node module from pacakge.json.
 
 **Whatever we can regenerate dontput it on git**
 
+**npx parcel index.html**
+
+npm is for installing the packages.
+npx is for executing the packages.
+
+npm install react
+npm i react-dom
+
+**Browser scripts cannot have imports or exports**
+
+In index.html, we have app.js script so it considers it as a normal js file.
+
+So we need to tell it that it is a module.
+
+## Parcel
+
+- Dev build
+- Local Server
+- HMR = hot module pelacement
+- file watching Algorithm - written in C++
+- Caching -faster builds stored in **.parcel-cache**
+- Image optimization
+- Minification 
+- bundling
+- Compressing
+- Consistent hashing
+- Code spliting
+- differenial bundling - adjust code according to the browser
+- Diagnostics
+- error handling
+- you can also host your app on https
+- Tree shaking- remove unnecessary code.
+- different dev and production bundles
+
+**npx parcel build index.html** to build production build
+
+in **dist** file we will have the actual code after the build,.
+
+browser list is an npm pacakge that helps us to manage that on what all browers we can user our app.
+
+browserlist.dev
+
+This all cn be handled using **create react app**
+
 
 
