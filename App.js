@@ -11,8 +11,12 @@ const heading = React.createElement(
   { id: "heading", xyz: "abc" },
   "Hello world from react"
 );
+
+// all the react code will render under the root element
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // the render method is responsible for putting object inside h1 and rendering it.
+
+// if we already have something inside the root div, it will be replaced by te below line.
 
 root.render(heading);
