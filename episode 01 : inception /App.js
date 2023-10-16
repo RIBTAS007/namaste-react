@@ -1,4 +1,4 @@
-// Element, attributes, inner html code
+// Create Element takes 3 arguments: element, attributes object, inner html code
 
 // the heading is a react object using create Element
 

@@ -1,4 +1,4 @@
-// create the following strcuture using react
+// Q. create the following strcuture using react
 
 
   /* <div id="parent">
@@ -12,7 +12,7 @@
     </div>
 </div> */
 
-// we can write react without JSX as written below, but it makes reading the code hard, hence we use JSX.
+//Ans.  we can write react without JSX as written below, but it makes reading the code hard, hence we use JSX.
 
 const parent = React.createElement(
   "div",
@@ -25,6 +25,8 @@ const parent = React.createElement(
   ]
   )
 );
+
+// Make sure you are using an Array when you want to have multiple children 
 
 console.log(parent);
 
