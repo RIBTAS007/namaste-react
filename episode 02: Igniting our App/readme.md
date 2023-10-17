@@ -1,3 +1,10 @@
+## Code in episode 01
+
+- Our code written in episode 01 is not optimized to push into production.
+- it has lots of comments , and console logs n all.
+- for doing this we need to do code splitting, bundling, image optimization, and may other things.
+- In this episode we will learn how we can create our own create-react-app that is production ready.
+
 NPM does not stands for node package manager. 
 NPM does not have a full form.
 NPM works in managing packages
