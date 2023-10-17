@@ -5,52 +5,73 @@
 - for doing this we need to do code splitting, bundling, image optimization, and may other things.
 - In this episode we will learn how we can create our own create-react-app that is production ready.
 
-NPM does not stands for node package manager. 
-NPM does not have a full form.
-NPM works in managing packages
+## Igniting the app
 
-NPM is a package manager for javascript.
+- Their are lot of packages working behind the scenes to make the app fast and production ready.
+- React alone is not sufficient.
 
-We can use **npm init** to install it.
+## NPM
 
+- NPM does not stands for node package manager. 
+- NPM does not have a full form.
+- NPM manages packages but it does not stands for node package manager.
+- NPM is a package manager for javascript, it is standard repository for all the packages.
+- when we create a react app using create-react-app, it already has npm present in it.
+
+# Install NPM
+
+- We can use **npm init** to install it.
+- if we do `npm init -y` it skips lot of stuff.
+- Once we do it it will ask the following and we can fill it accordingly.
 - pacakage name: (namaste-react)
-- version: (1.0.0)
-- description: This is the notes of namaste react
-- entry point: App.js
-- test command: jest
-- git repository: https://github.com/RIBTAS007/namaste-react
-- keyword: react, javascript
-- author: Satbir
-- license: 
+    - version: (1.0.0)
+    - description: This is the notes of namaste react
+    - entry point: App.js
+    - test command: jest
+    - git repository: https://github.com/RIBTAS007/namaste-react
+    - keyword: react, javascript
+    - author: Satbir
+    - license: ISC
 
-When we click on enter and submit we will get the **package.json** which is the configuration of the npm file.
+- When we click on enter and submit we will get the **package.json** which is the configuration of the npm file.
+- The content is stored in json code, which is basically the configuration for npm.
 
-many times thes epacakages are also known as **dependencies**
+## Why do we need Package.json
 
-ur project depends on various packages, so those packages are called dependencies and npm helps use to manage it.
+- Our project depends on various packages, so those packages are called **dependencies** and npm helps use to manage it.
+- NPM needs to the configurations like the version of the pacakge etc, which is stored in package.json.
 
-The most important package for our project is called **bundle** like webapp, parcel, vite.
+## Bundler
 
-These bundlers help us to bundle and make our app production ready. 
+- The most important package for our project is called **bundler** like webapp, parcel, vite.
+- These bundlers help us to bundle and make our app production ready by optimizing our code.
+- *It packages our app properly so that it can be shipped to production*
+- create react app uses **webapp**.
+- We will be using **Parcel** are our bundler for this episode.
 
-create react app uses **webapp**.
+## Parcel
 
-We will use **npm install -D parcel** to install parcel.
-It will fetch the parcel packages from npm.
+- We will use **npm install -D parcel** to install parcel.
+- It will fetch the parcel packages from npm.
+- The command to install anything is same.
+- `-D` in `install -D parcel` stands for installing it as Dev dependency.
+- when we execute this command it will install parcel from npm
 
-Types of dependency:
-**Dev dependency**: required in dev phase.
-**Normal dependency**: Used in production also
+## Types of dependency:
 
-**-D** in **install -D parcel** stands for installing it as Dev dependency.
+- **Dev dependency**: required in dev phase.
+- **Normal dependency**: Used in production also
 
-"parcel": "^2.8.3".
+## After Parcel installation
 
-The ^ is used for version control, if we have this written then it will automatically upgrade the version to the lastest version.
+- We will se parcel mentioned as "parcel": "^2.8.3" in the package.json as a dev dependency.
+- The ^ is used for version control, if we have this written then it will automatically upgrade the version to the lastest version. This is known as carot.
+- ~ is called as tilde.
 
-We will now get another file **package-lock.json**
+## package-lock.json
 
-**package-lock.json** tracks the exact record of the dependencies that are installed where as **pacakge.json** contains the approx versions.
+- We will now get another file **package-lock.json**
+- **package-lock.json** tracks the exact record of the dependencies that are installed where as **pacakge.json** contains the approx versions.
 
 **node modules** contains all the code of all the dependencies that is fetched from npm. 
 
