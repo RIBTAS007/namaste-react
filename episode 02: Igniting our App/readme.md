@@ -23,7 +23,7 @@
 - We can use **npm init** to install it.
 - if we do `npm init -y` it skips lot of stuff.
 - Once we do it it will ask the following and we can fill it accordingly.
-- pacakage name: (namaste-react)
+    - pacakage name: (namaste-react)
     - version: (1.0.0)
     - description: This is the notes of namaste react
     - entry point: App.js
@@ -73,61 +73,87 @@
 - We will now get another file **package-lock.json**
 - **package-lock.json** tracks the exact record of the dependencies that are installed where as **pacakge.json** contains the approx versions.
 
-**node modules** contains all the code of all the dependencies that is fetched from npm. 
+## Node Modules
 
-**Transitive dependencies**: we required parcel, so we have node module of parcel downloaded, but this module has more dependencies, which further have more dependecies, hence all those dependencies are also downloaded in the node modules.
+- **node modules** contains all the code of all the dependencies that is fetched from npm. 
+- **Transitive dependencies**: we required parcel, so we have node module of parcel downloaded, but this module has more dependencies, which further have more dependecies, hence all those dependencies are also downloaded in the node modules.
+- Every node module, have their own **package.json** which store details about its dependencies.
+- We should not put our node modules to git but we should put package.json and package-lock.json as they are maintaining the configurations of all the dependencies required because of which we can regenerate the node modules.
+- The best practice is to put it inside **.gitignore**
+- We can use `npm install` to regenerate all the node module from package.json.
+- **Whatever we can regenerate dont put it on git**
+- The lock in packagelock.json is their because it stores the exact versions used in our app.
 
-Every node module, have their own **pacakage.json** which store details about its dependencies.
+## Ignite Our App
 
-We should not put our node modules to git but we should put package.json and pacakge-lock.json as they are maintaining the configurations of all the dependencies required because of hwhich we can regenerate the node modules.
-
-We can use **npm install** to regenerate all the node module from pacakge.json.
-
-**Whatever we can regenerate dontput it on git**
-
-**npx parcel index.html**
+- We will write `npx parcel index.html` where index.html is the source file of our project.
+- By doing this Parcel will create a server for us and our app will run at the localhost.
 
 npm is for installing the packages.
 npx is for executing the packages.
 
-npm install react
-npm i react-dom
+# Installing React
 
-**Browser scripts cannot have imports or exports**
+- CDN links are not a good way to build react and react DOM in our project.
+- It will be a costly operation for doing network call.
+- If tommorow the react version changes then it could be a problem.
+- hence we can use `npm install react` to install react and `npm i react-dom` to install react Dom.
+- `npm i` and `npm install` are same thing
+- We are not using -D here as we used during parcel because we want it as a normal dependency, not as a dev dependency.
+- now we can remove the react CDN links from our **index.html**
+- when we write `import React from "react";` it means we are refering to the react module that we installed and which is now present in our **node modules**
+- Also update the script of calling app.js to `<script src="./App.js" type="module"></script>`otherwise we get the below error.
+- **Browser scripts cannot have imports or exports**
+- In index.html, we have app.js script so it considers it as a normal js file or a browser script and normal js file does not have imports.
+- So we need to tell it that it is a module.
+- Make sure to add `import React from "react";` and `import ReactDOM from "react-dom/client";` in app.js.
 
-In index.html, we have app.js script so it considers it as a normal js file.
-
-So we need to tell it that it is a module.
-
-## Parcel
+## What does Parcel do
 
 - Dev build
 - Local Server
-- HMR = hot module pelacement
-- file watching Algorithm - written in C++
-- Caching -faster builds stored in **.parcel-cache**
-- Image optimization
-- Minification 
-- bundling
-- Compressing
+- HMR = hot module pelacement , (instantly refreshing the page on browser)
+- file watching Algorithm - written in C++ is used by Parcel to track the contents of the file.
+- Caching -faster builds stored in **.parcel-cache**: Every time we build the time reduces.
+- Image optimization: load images in the browser
+- Minification of the files
+- bundling of the files
+- Compressing of the files
 - Consistent hashing
 - Code spliting
-- differenial bundling - adjust code according to the browser
+- differenial bundling - adjust code according to the browser, support older browsers.
 - Diagnostics
 - error handling
 - you can also host your app on https
-- Tree shaking- remove unnecessary code.
+- Tree shaking- remove unused code.
 - different dev and production bundles
 
-**npx parcel build index.html** to build production build
+## creating a production build
 
-in **dist** file we will have the actual code after the build,.
-
+- We can use `npx parcel build index.html` to build production build.
+- This will give us an error , so we need to remove `main: "App.js"` from our package.json file.
+- In **dist** file we will have the actual code after the production build.
+- It is will store the optimized code files.
 browser list is an npm pacakge that helps us to manage that on what all browers we can user our app.
+- The parcel.cache and dist can be regenerated, so we dont need to put it in github.
 
-browserlist.dev
+## pushing to git
 
-This all cn be handled using **create react app**
+- We push our code to git and server fetches the code from git and the srver will host the app for the local user.
+- we only need to push package and packagelock files.
+
+## Make our app supported in older browsers
+
+- for doing this we need to know about browserslist which is an npm package which we need to configure.
+- In our package.json we can add a key value like `browserslist:[]`, the value will be an array of browsers.
+- We can check (browserlist.dev)[browserlist.dev] to know what we can add in the array.
+- It does not mean it will not support other older browsers, it just means our app will surely support the browsers added in the array and may or may not support other versions.
+
+## Summary
+
+- React does not does everything.
+- Its the job of the bundler. Here we have used **Parcel**.
+- This all can be handled using **create react app**
 
 
 

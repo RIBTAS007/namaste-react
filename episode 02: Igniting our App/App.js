@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 const heading = React.createElement(
-    "h1",
-    { id: "heading", xyz: "abc" },
-    "Hello world from react"
-  );
+  "h1",
+  { id: "heading", xyz: "abc" },
+  "Hello world from React"
+);
 
-  const root = ReactDOM.createRoot(document.getElementById("root"));
-  root.render(heading);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(heading);
+
   
