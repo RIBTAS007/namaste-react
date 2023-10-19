@@ -1,3 +1,5 @@
+# Episode 03: Laying the Foundation
+
 ## Creating scripts for start and build.
 
 - `npx parcel index.html`: execute index.html using parcel and will create a development build for us.
