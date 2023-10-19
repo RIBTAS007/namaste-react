@@ -1,3 +1,5 @@
+# Episode 02: Igniting Our App
+
 ## Code in episode 01
 
 - Our code written in episode 01 is not optimized to push into production.
@@ -18,7 +20,7 @@
 - NPM is a package manager for javascript, it is standard repository for all the packages.
 - when we create a react app using create-react-app, it already has npm present in it.
 
-# Install NPM
+## Install NPM
 
 - We can use **npm init** to install it.
 - if we do `npm init -y` it skips lot of stuff.
@@ -92,7 +94,7 @@
 npm is for installing the packages.
 npx is for executing the packages.
 
-# Installing React
+## Installing React
 
 - CDN links are not a good way to build react and react DOM in our project.
 - It will be a costly operation for doing network call.
@@ -146,7 +148,7 @@ browser list is an npm pacakge that helps us to manage that on what all browers 
 
 - for doing this we need to know about browserslist which is an npm package which we need to configure.
 - In our package.json we can add a key value like `browserslist:[]`, the value will be an array of browsers.
-- We can check (browserlist.dev)[browserlist.dev] to know what we can add in the array.
+- We can check [browserlist.dev](browserlist.dev) to know what we can add in the array.
 - It does not mean it will not support other older browsers, it just means our app will surely support the browsers added in the array and may or may not support other versions.
 
 ## Summary
