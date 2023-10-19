@@ -1,3 +1,5 @@
+# Episode 01: Inception
+
 ## Tips
 
 - Make your own notes
@@ -50,7 +52,7 @@
 - rendering something is the job of DOM
 - Hence when we need to put the h1 element inside root using render menthod then we will use reactDOM.
 
-# Using react to write Nested Divs
+## Using react to write Nested Divs
 
 - the most imp operation is the DOM tree update.
 - All the frameworks try to optimize this.
