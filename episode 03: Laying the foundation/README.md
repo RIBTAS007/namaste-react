@@ -51,7 +51,7 @@
 - If we write JSX in multiple lines, we need to wrap it inside `()`.
 - JSX code can have only 1 parent element. Otherwise we need to wrap it inside `<div></div>` or `<></>`
 
-# React Compoenents
+## React Compoenents
 
 - In React everything is a component.
 - In React we have 
@@ -67,7 +67,7 @@
 - We can write any JS code using `{}` inside JSX so thats why before we return JSX in a component we are able to write JS code  in a component.
 - we can also write JS inside JSX using `{}`
 
-# JSX Benefits
+## JSX Benefits
 
 - Say we have `const data = api.getData()` and the attacker is sending soem malicious data into it , and we are using this `data` variable inside our react component.
 - This attack is known as **cross site scripting**. JSX takes care of these injection attacks.
