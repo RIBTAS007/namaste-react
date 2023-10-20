@@ -1,1 +1,1 @@
-![App][episode04.png]
+![App](episode04.png)
