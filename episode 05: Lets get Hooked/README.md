@@ -1,65 +1,60 @@
-# Episode 04: Talk is cheap, show me the code!
+# Episode 05: Lets get Hooked
 
-## Food ordering App
+## Why React?
 
-- The first this always is to plan. Then only start writing the code.
-- Try to build the wireframe. Think about the components
-- The following will be our general layout:
-    - header
-        - logo
-        - nav Items
-        - about
-    - Body
-        - Search
-        - restaurant container
-        - restaurant card
-            - image
-            - rating
-            - price
-            - delivery time
-    - footer
-        - Copyright
-        - Links
-        - Address
-        - Contact
+- everything that we can do with React we can do with HTML, CSS , JS.
+- React or any other framework makes the developer experience easier.
 
-## CSS
+## File Structure
+- first we will break our files and folders.
+- We can make `src` folder and everything the source code is kept in this.
+- so first shift the **App.js** file into **src** folder and update its reference in **index.html**
+- Breaking files into components and folders makes it easy to manage and read.
+- Their is no proper naming conventions or how to break files.
+- You can break it based on components or based on features.
+- React docs say **React does not have any opinions on how you put files into folders**
+    - Group by feature or routes
+    - Group by file type
+    - Avoid too much nesting
+- try to name the file same as component name.
+- some people name file as .js and some people use .jsx and some use .tsx.
+- The good way is to use .js extension. It doesn't matter much.
+- Keep the things as simple as possible.
 
-- the inline styles will be an object.
-- Eg: `style={{backgroundColor: "grey"}}`
-- The outer bracket denotes that its JS code, the inner bracket denotes that its a n object.
-- This is same as writing:
-- ```
-    const s ={
-    backgroundColor: "grey"
-    };
+## import and export components
 
-    style={s}
-    ```
+- Before we can import components we need to export it. 
+- two ways to export
+   1. **default export**
+      - `export default componentName`
+      - `import component from "path;`
+      - We can write like `import Body from "./components/Body.js";` or `import Body from "./components/Body";` it does not matter.
+      - by default react assumes you are importing JS file if you dont give an extension.
+      - In one file we can have only one default export.
+   2. **named export**
+      - `export const Component;`
+      - `import {component} from "path;`
+      - Used when from a single file we need to export multiple things.
+      - need to use `{}` in their respective imports. 
+      - Eg: `import {a} from ../filename;`
+      - when we have to export multiple this we will write `export` keyword in the start of that code.Eg:
+      - ```
+        export const a =10;
+        export const b = "api_url";
+        ```
+- whenever we have any hardcoded data or url, never keep it inside the component folders. This is an industry standard.
+- we can make a file with the name of **config.js** or **const.js** or **utils.js** and keep the hardcoded data inside it.
 
-## Props
+**Can we use default export and named export togather ?**
 
-- props is a short form for properties.
-- they are arguments to the functional components.
-- We use it to passing dynamic data.
-- we can pass any number of props.
-- writing the prop names at the `()` is called **destructuring on the fly**.
-- eg: `const abc = ({prop1, prop2}) => {...};`
-- We can also write it like `const {prop1, prop2} = props;`
+## Making website Dynamic
 
-## How does data comes in Big Apps ?
+- create a button which on clicking will filter out and show only top rated restaurants.
+- restaturants having >4 star rating is considered to be  top rated restaurant.
 
-- Go to [swiggy.com](swiggy.com) and click on inspect -> network tab -> Fetch/XHR.
-- You will see the v5?lat API , in that go to the preview -> data section.
-- **Config driven UI**: swiggy data
-- UI + data = frontend.
 
-##  Key and Map
+ 
 
-- key is a unique keyword and we should always use it whenever we are using map.
-- It takes a big peformence hit if we dont add a key because **it renders all object elements**.
-- We can also use index as the key. 
-- This index is the property of the map. 
-- It logically looks right, but react itself says that **we should not use index as keys in react**
-- **Index  as a key is an anti pattern**
-- If we dont have a unique ID, we can use indexes but it is not recommended.
+
+
+
