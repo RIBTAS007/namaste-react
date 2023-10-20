@@ -1,32 +1,43 @@
-The first this always is to plan. Then only start writing the code.
+# Episode 04: Talk is cheap, show me the code!
 
-Try to build the wireframe.
-Think about the components
+## Food ordering App
 
-- header
-  - logo
-  - nav Items
-- Body
-  - Search
-  - restaurant container
-  - restaurant card
-- footer
-  - Copyright
-  - Links
-  - Address
-  - Contact
+- The first this always is to plan. Then only start writing the code.
+- Try to build the wireframe. Think about the components
+- The following will be our general layout:
+    - header
+        - logo
+        - nav Items
+        - about
+    - Body
+        - Search
+        - restaurant container
+        - restaurant card
+            - image
+            - rating
+            - price
+            - delivery time
+    - footer
+        - Copyright
+        - Links
+        - Address
+        - Contact
 
-the inline styles will be an object.
+# CSS
 
-style={{backgroundColor: "grey"}}
+- the inline styles will be an object.
+- Eg: `style={{backgroundColor: "grey"}}`
+- The outer bracket denotes that its JS code, the inner bracket denotes that its a n object.
+- This is same as writing:
+- ```
+    const s ={
+    backgroundColor: "grey"
+    };
 
-This is same as writing:
+    style={s}
+    ```
 
-const s ={
-  backgroundColor: "grey"
-};
-
-style={s}
+# Props
 
 props is a short form for properties.
 
