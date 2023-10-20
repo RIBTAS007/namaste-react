@@ -1,23 +1,34 @@
 {
-  "name": "react_episode_three",
+  "name": "namaste-react",
   "version": "1.0.0",
-  "description": "learning basics of react",
+  "description": "na",
   "scripts": {
-    "start":"parcel index.html",
-    "build":"parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RIBTAS007/namaste-react.git#Episode02_IgnitingOurApp"
+  },
   "keywords": [
-    "javascript",
     "react"
   ],
-  "author": "Satbir",
+  "author": "satbir singh",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RIBTAS007/namaste-react/issues"
+  },
+  "homepage": "https://github.com/RIBTAS007/namaste-react/tree/Episode02_IgnitingOurApp#readme",
   "devDependencies": {
-    "parcel": "^2.9.3"
+    "parcel": "^2.10.0",
+    "process": "^0.11.10"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
