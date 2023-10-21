@@ -73,3 +73,12 @@
 - One way to resolve it is to show a loader, but its not a optiomal option.
 - Their is a concept known as Shimmer UI. We load a fake page, until real data is updated.
 - Page loads -> render shimmer UI -> API call -> rerender.
+- This is also called **conditional rendering**
+
+## why we use UseState ?
+
+- Implement a login logout button.
+- whenever state variable changes, react rerenders the component, which doesnt happen when we use noraml variables.
+- how is constant variable is assigned a new variable ?
+- it doesnt assign, it deletes the old var and creates a new variable when it renders the component.
+
