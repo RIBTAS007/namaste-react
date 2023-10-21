@@ -50,3 +50,30 @@
     errorElement: <Error/>
   },```
 - react-router-dom also provides with a hook called useRouteError, which gives us more info about the error.
+
+## creating child routes
+- what if we want to display the header section in all the pages ?
+- we need to use child routes.
+- just copy the config and put it inside the children of the parent element config.
+- now wherever inside our App componnet we want to display the children we will write `<Outlet/>`
+- Outlet is just like a placeholder which will be replaced by the original component according to the path.
+
+## creating links
+
+- never use `<a></a>` tag in react for links since it reloads the whole page.
+- we can use `<Link to></Link>` tag provided by react router dom.
+- link works same as the anchor tag, it just not reloads the page.
+- eg: `<Link to="/about">About Us</Link>`
+- In react, everything is a component, even the pages.
+- so even when we use links, our page is not reloaded only the component is refreshed.
+- This is the reason why react apps are known as **Single Page Applications**
+
+## Types of routing
+
+- **Client Side routing**
+    - loads the component without making any network call.
+    - eg: using `<Links></Links>`
+- **Server side routing**
+    - reloads the whole page.
+    - fetches the html from server and displays it on frontend.
+    - eg: using `<a></a>`
