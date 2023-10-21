@@ -67,6 +67,7 @@
 - In react, everything is a component, even the pages.
 - so even when we use links, our page is not reloaded only the component is refreshed.
 - This is the reason why react apps are known as **Single Page Applications**
+- Behind the scenes, link is an anchor tag
 
 ## Types of routing
 
@@ -77,3 +78,19 @@
     - reloads the whole page.
     - fetches the html from server and displays it on frontend.
     - eg: using `<a></a>`
+
+## Dynamic routing
+
+- In swiggy when we click ona restuarant, for every restaurant the path(url) changes.
+- This is known as dynamic routes
+
+## Implementing dynamic routes
+
+- create a restaurant page component first. `RestaurantMenu.js`
+- for creating dynamic routes we need to use `:id` in the path to define that it is a dyamic route.eg:
+-  ```
+   {
+      path: "/restaurants/:resId",
+      element: <RestaurantMenu/>
+   }
+   ```
