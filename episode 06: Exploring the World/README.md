@@ -66,3 +66,10 @@
 - Our browsers block us to call the API from one origin to other origin i.e. from swiggy API to localhost.
 - We can use the CORS enable extension to resolve it.
 - **Tip:** Always use optional chaining when fetching data.
+
+## Loader
+
+- When we are fetching from the API , at that phase the sreen is shown empty.
+- One way to resolve it is to show a loader, but its not a optiomal option.
+- Their is a concept known as Shimmer UI. We load a fake page, until real data is updated.
+- Page loads -> render shimmer UI -> API call -> rerender.
