@@ -75,10 +75,50 @@
 - Page loads -> render shimmer UI -> API call -> rerender.
 - This is also called **conditional rendering**
 
-## why we use UseState ?
+## Why we use UseState ?
 
 - Implement a login logout button.
-- whenever state variable changes, react rerenders the component, which doesnt happen when we use noraml variables.
+- whenever state variable changes, react starts the reconcialition process and rerenders the component, which doesnt happen when we use normal variables.
 - how is constant variable is assigned a new variable ?
 - it doesnt assign, it deletes the old var and creates a new variable when it renders the component.
 
+## Taking inputs
+
+
+- ```
+   const [searchText, setSearchText] = useState('');
+   <input type="text" className="search-box" value={searchText}/>
+               <button onClick={()=>{
+               setSearchText()
+               }}>Search</button>
+   ```
+- if we do like this , the input will not display anything.
+- we have bind the serachText variable with the value and the value is binded with the input element.
+- when I am changing the value by typing in the input the value is not changing since it is binded with the searchText variable.
+- Hence we need to change the searchText var, for this we will use the onChange() function.
+- ``` 
+   <input   
+      type="text" 
+      className="search-box" 
+      value={searchText}
+      onChange={(e)=>{
+         setSearchText(e.target.value);
+         }}
+   />
+   ```
+- Hence our component is getting rerendered, whenever we are doing a key press, since the state variable searchtext is getting updated.
+
+## Filter concept
+
+- whenever we are filtering never update the orignal varaibale.
+- store the filtered result in a new state variable and use that state variable to display the result.
+- ```
+  <button onClick={()=>{
+         const filteredRestaurant = listOfRestaurant?.filter(
+             (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
+         );
+         setFilteredRestaurant(filteredRestaurant);
+   }}>
+      Search
+   </button>
+  ```
