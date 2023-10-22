@@ -38,3 +38,12 @@
 - `super(props)` pass the  props to the parent constructor
 - we can access the props then using `this` keyword. Eg: `this.props.name`
 
+## creating states
+
+- state was created whenever a class intance was created in cbc 
+- loading a cbc means you are creating an instance of the class.
+- we create ths state variable also in the constructor using `this.state`
+- `this.state` will contain all the state variables
+- behind the scenes react combines all the state varaiable into single obj both in cbc and fbc.
+
+
