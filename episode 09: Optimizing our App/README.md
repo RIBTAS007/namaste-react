@@ -15,8 +15,11 @@
 - the best place to create hooks is inside the utils since hooks are a helper functions.
 - always start with name of the hook file with `use` and keep the hook and the file name same.
 
+## create a hook to check user is online/offline
+
 - first always write a function and see what will be the input and the output in it.
 - then just write the logic.
+- for doing this we will use an addeventlistener.
 
 
 
