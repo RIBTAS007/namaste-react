@@ -136,6 +136,10 @@
 - DOM manipulation is the most expensive operation, hence by clubbing the commit phase, it needs to do it once instead of twice.
 - everythiing in render phase is happening under the virtual DOM. 
 
+## Making API calls
+
+
+
 
 
 

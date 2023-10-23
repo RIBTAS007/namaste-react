@@ -1,5 +1,5 @@
 import {Component} from 'react';
-import User from './User';
+// import User from './User';
 import UserClass from './UserClass';
 
 class About extends Component{
@@ -12,20 +12,20 @@ class About extends Component{
     //   count2: 1,
     // };
 
-    console.log("parent constructor");
+    // console.log("parent constructor");
   }
 
   componentDidMount(){
-    console.log("parent component did mount");
+    // console.log("parent component did mount");
   }
 
   render(){
     console.log("child render");
     return (
       <div><h1>About Us</h1>
-      <User name={"Satbir(function)"}/>
+      {/* <User name={"Satbir(function)"}/> */}
       <UserClass name={"Satbir(class)"} loc={"hyderabad class"}/>
-      <UserClass name={"Satbir2(class)"} loc={"hyderabad class"}/>
+      {/* <UserClass name={"Satbir2(class)"} loc={"hyderabad class"}/> */}
       </div>
     );
   }
