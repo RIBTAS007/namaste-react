@@ -138,7 +138,112 @@
 
 ## Making API calls
 
+- [https://api.github.com/users/username](https://api.github.com/users/username)
+- when we want to make an API call we will make componentDidMount() function as async function. eg:
+- ```
+  async componentDidMount(){
+    const data = await fetch("https://api.github.com/users/ribtas007");
+    const json = await data.json();
 
+    console.log(json);
+  }
+  ```
+- As soon as UserClass was loaded => **constructor** was called => state variables were created with some default values.
+- then **render()** happens with the default values
+- react updates the DOM with the dummy data.
+- it then calls the **componentDidMount()** => it makes the **API call** => it called this.setState.
+- Mounting lifecycle ends and from here the updating cycle begin
+- the state variables are updated.
+- since the state variable is updated, **react renders** the component again and updates the DOM.
+- Then it calls **componentDidUpdate()**  is called.
+
+## Summary of API call
+
+- Mounting
+  - constructor(dummy)
+  - Render(dummy)
+      - `<HTML DUMMY>`
+  - ComponentDidMount
+      - API Call
+      - `<this.setstate>` -> State variable is updated
+
+- UPDATE
+  - render
+     - `<HTML dummy>`
+  - ComponentDidUpdate()
+
+## unmounting cycle
+
+- There is a method called **componentWillUnmount()** which is called just before our component is unmounting.
+- unmount means when the component will disappear from the html.
+
+## Advanced stuffs
+
+- Never compare your react cycle in cbc to functional components.
+- in the first render of the cbc , componentDidMount() is called.
+- After this, it is just updated and the ComponentdidUpdate() is called in the subsequent rerenders.
+- when we write the new react code, they removed the concept of react lifecycle.
+- Their were even more lifecycle methods that were deprecreated in new versions.
+
+## Create a useEffect type of code in cbc
+
+- We need to simulate useEffect shown below in class based component as shown below:
+- ``` 
+  useEffect(()=>{
+
+  },[count1]);
+
+    useEffect(()=>{
+
+  },[count2]);
+  ```
+- we can do this as follows in cbc: 
+- ```
+  componentDidUpdate(prevProps, prevState){
+    if(this.state.count !== prevState.count){
+      //code
+    }
+
+    if(this.state.count2 !== prevState.count2){
+      //code
+    }
+  }
+  ```
+
+## Why we use componentWillUnmount()
+
+- ```
+  componentDidMount(){
+    setInteval(()=>{
+      console.log("react");
+    },1000);
+    
+  }
+  ```
+- if we write the above code then whenever we change our pages, it will reate a new instance of setInterval and the previous instance will also not be deleted. This will cause a performance loss and after a certain time our app will blow up.
+- Hence we need to write clearInterval in componentWillUnmount()
+- ```
+  componentWillUnmount(){
+    clearInterval(this.timer);
+  }
+  ```
+
+## Return in useEffect
+
+- ```
+  useEffect(()=>{
+    console.log("useEffect");
+    const timer = setInteval(()=>{
+      console.log("react");
+    },1000);
+
+    return ()=>{
+      clearInterval(timer);
+      console.log("useEffect return");
+    }
+  },[]);
+  ```
+- we can use return in useEffect which is a callback function that is executed when we go to some other page and the current component is unmounted.
 
 
 
