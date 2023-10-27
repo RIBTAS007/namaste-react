@@ -1,4 +1,5 @@
 import Shimmer from "./Shimmer";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
@@ -7,6 +8,8 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
 
   const resInfo = useRestaurantMenu(resId);
+
+  const [showIndex, setShowIndex]= useState(null);
 
   if (resInfo === null) return <Shimmer />;
 
@@ -26,33 +29,28 @@ const RestaurantMenu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
-  // console.log(categories);
-
   return (
     <div className="text-center">
       <h1 className="font-bold my-6 text-2xl">{name}</h1>
       <p className="font-bold text-lg">
         {cuisines.join(", ")} - {costForTwoMessage}
       </p>
-      {categories.map((category) => (
+      {categories.map((category, index) => (
         <RestaurantCategory
           data={category.card.card}
           key={category.card.card.title}
+          showItems={index=== showIndex ? true: false}
+          // setShowIndex={()=> setShowIndex(index)}
+          toggleShowItems={() => {
+            // Toggle the showItems state for the clicked category.
+            if (index === showIndex) {
+              setShowIndex(null); // If it's already expanded, collapse it.
+            } else {
+              setShowIndex(index); // If it's collapsed, expand it.
+            }
+          }}
         />
       ))}
-      {/* <h3></h3>
-      <h2>Menu</h2>
-      <ul>
-        {carousel
-          ? carousel?.map((item) => (
-              <li key={item.bannerId}>
-                {item.title} - {item.dish.info.price / 100}
-              </li>
-            ))
-          : itemCards?.map((item) => (
-              <li key={item.card.info.id}>{item.card.info.name}</li>
-            ))}
-      </ul> */}
     </div>
   );
 };
