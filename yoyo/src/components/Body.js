@@ -14,7 +14,6 @@ const Body = () => {
   const RestaurantCardDiscounted = withDiscountedLabel(RestaurantCard);
 
   const resList = useRestaurantList();
-  console.log(resList);
 
   useEffect(() => {
     setListOfRestaurant(resList);
@@ -31,7 +30,7 @@ const Body = () => {
       </>
     );
   }
-
+  
   return listOfRestaurant.length === 0 ? (
     <Shimmer />
   ) : (

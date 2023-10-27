@@ -24,3 +24,14 @@
 - we need to pass the props from where it is called , and then pass it to the RestaurantCard.
 - using {...props} will pass all the props that we have received.
 - These higher order functions are **Pure functions**, means it will not change the behaviour of the RestaurantCard, it is just add something using it.
+
+## React layers
+
+- UI and data layer is present in React, UI layer is powered by the data layer.
+- so managing data layer is the main thing like state variable, props etc.
+
+## Building the item menu page
+
+- accordian component is the one that expands and collapses.
+   - accordian header - menu title
+   - accordian data - menu items - `<ItemList/>`
