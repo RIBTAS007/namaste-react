@@ -52,4 +52,36 @@
 - Now our testing babel config will be used and parcel babel config will be disabled.
 - We can write `npm run test` and it will call jest to start the testing.
 
+## Configure jest and jsdom
+
+- write `npx jest --init` for configuring jest.
+
+- ```
+  The following questions will help Jest to create a suitable configuration for your project
+
+  ✔ Would you like to use Typescript for the configuration file? … no
+  ✔ Choose the test environment that will be used for testing › jsdom (browser-like)
+  ✔ Do you want Jest to add coverage reports? … yes
+  ✔ Which provider should be used to instrument code for coverage? › babel
+  ✔ Automatically clear mock calls, instances, contexts and results before every test? … yes
+  ```
+- the test cases does not run on browsers, so they need a runtime env to run, so we will use it in jsdom, which will give superpowers of a browser.
+- We also need to install jsdom library using `npm i --save-dev jest-environment-jsdom` if we are using jest ver >28
+
+## Writing dummy test
+
+- we can create a folder `__tests__` and write any file inside it.
+- we can also create a file as follows:
+   - header.test.js
+   - header.test.ts
+   - header.spec.js
+   - header.spec.ts
+- all these would be considered as testing files.
+- `__` is known as dunder
+- In the test file we write a test function which takes 2 arguments:
+   - description the test as String
+   - callback function that writes the test and includes:
+       - **Assertion**: `expect(res).toBe(7);`
+
+
 
