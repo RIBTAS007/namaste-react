@@ -83,5 +83,49 @@
    - callback function that writes the test and includes:
        - **Assertion**: `expect(res).toBe(7);`
 
+## checking contact page is loaded or not
+
+- whenever we are testing a UI component in react we have to render it first into JSDom.
+- for this we need to use render() that takes argument of the component to be rendered.
+- whatever is rendered can be accessed through screen and we can use screen.get
+- for using JSX inside test file we need to install `npm i -D babel/preset-react`
+
+
+## to be in the document is not a function
+
+- since we are trying to render our component onto JS Dom and we are trying to find the heading inside the rendered screen.
+- we need to use a testing library named **testing-library/jest-dom**
+- whenever a test fails the jest shows what was rendered on the screen.
+- when we do console.log(), it will return us the JSX object.
+- when we want to checkk multiple elements we will write getByAll otherwise we use getBy.
+
+## **render** -> **query** -> **assert**
+
+- we can group multiple test cases using describe().
+- we can even have describe inside describe for nested grouping.
+- we can also write `it` in place of writing `test`. `it` is just an alias for test.
+- we dont need to pass coverages folder into git so we can ignore it.
+
+## Header
+
+- When we load header the cart should have 0 items
+- Could not find react-reduc context value.
+  - we are rendering header component in isolation in the JSDOM
+  - It understands JSX but does not know redux.
+  - Hence we need to provide the redux store to our header.
+
+- Error occured in Link component
+  - This link is coming from react router dom.
+  - so we need to provide of react router dom context also.
+  - we will use browserRouter for this.
+
+- we can also use regex
+
+- check login and logout toggle when we click on the login button.
+- for these cases where event handler is required we can use fireEvent.
+
+
+
+
 
 
