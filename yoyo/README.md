@@ -122,7 +122,10 @@
 - we can also use regex
 
 - check login and logout toggle when we click on the login button.
-- for these cases where event handler is required we can use fireEvent.
+- for these cases where event handler is required we can use **fireEvent**.
+
+- when we want to create components with props we need to create mock data.
+
 
 
 
