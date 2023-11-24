@@ -54,6 +54,31 @@
 - ` const email = useRef(null);`
 - `<input ref={email} ...`
 
+# Firebase
+
+- setup a new project in firebase
+- then add the firebase config file
+- then in firebase go to authentication and give access of type of authentication you want.
+- then do firebase login
+- then firebase init
+- if you are not able to see existing projects use `firebase login --reauth`
+- public folder ? build
+- configure as single page app ? No
+- setup automatic builds and deploys with github ? No
+- npm run build
+- firebase deploy
+
+## Steps for deployment
+
+- Install firebase CLI - 'npm install -g firebase-tools'
+- Firebase Login - `firebase login`
+- Initialize firebase - `firebase init` then select hosting
+- Deploy on firebase - `firebase deploy`
+
+## uAuth using Firebase
+
+- we should use web modular API
+
 
 
 
