@@ -38,10 +38,22 @@
     - movie suggestions
 
 ## Login Component
+
 - rafce
 - first we will focus on creating the routing component
 - create sign up form and convert it to Sign In form
 - use formik to build forms for managing forms in react.
+- after this we will start learning about form validations
+- when we click on the submit button of the form , it calls the default onSubmit method of the form which causes the whole app to reload.
+- for correcting this issue we need to use `onSubmit = {(e)=>e.preventDefault()}`
+
+## UseRef
+
+- we will learn about useRef hook
+- for getting the email and password input either we can use the state variables or we can use the reference to the input boxes.
+- ` const email = useRef(null);`
+- `<input ref={email} ...`
+
 
 
 
