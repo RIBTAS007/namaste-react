@@ -37,6 +37,12 @@
     - search bar
     - movie suggestions
 
+## Login Component
+- rafce
+- first we will focus on creating the routing component
+- create sign up form and convert it to Sign In form
+- use formik to build forms for managing forms in react.
+
 
 
 
