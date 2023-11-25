@@ -80,6 +80,18 @@
 - we should use web modular API
 - the `const auth = getAuth();` is used in all firebase APIs so we will write it seperately and use it again n again.
 
+## create reducer for storing user info
+
+- First create the store
+- then create the user slice
+- in user slice whatever is returned in the reducer functions is updated in the initialState.
+- onAuthStateChange 
+- useNavigate() hook is used to navigate
+- we can only use navigate hook inside the children components of the parent where the routes are defined using appRouter.
+
+create singup user account
+implemented sign out
+
 
 
 
