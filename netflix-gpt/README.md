@@ -78,6 +78,7 @@
 ## uAuth using Firebase
 
 - we should use web modular API
+- the `const auth = getAuth();` is used in all firebase APIs so we will write it seperately and use it again n again.
 
 
 
