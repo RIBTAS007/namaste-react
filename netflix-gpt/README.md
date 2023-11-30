@@ -17,6 +17,15 @@ Next we will add a ``return`` to this useEffect to unsubscribe to the onAuthStat
 
 ## Start building the Browse page
 
+- for showing movie list we will use the TMDB movie database.
+- register on TMDB website and get access token.
+- make the API call to get the movie list.
+- why is API called 2 times when we write useEffect ? This happens because of struct mode. 
+- in react index.js we wrapped the app inside strict mode. A lot of things happen twice in the local and will not happen in the build version.
+- it checks for inconsistencies between the calls and will throw an error during the rendering cycle.
+- once we setup and fetch the movies we will add ths movies in the redux store.
+- 
+
 
 
 
