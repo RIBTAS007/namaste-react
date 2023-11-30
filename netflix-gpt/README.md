@@ -11,7 +11,11 @@
 - we can also remove the `navigate("/browse");` from Login page, since now it will be taken care in the auth logic.
 - Hence now the routing will happen from the header component for login and sign in.
 
-Next we will add a return to this useEffect to unsubscribe to the onAuthStateChanged callback when the header component  unmounts
+Next we will add a ``return`` to this useEffect to unsubscribe to the onAuthStateChanged callback when the header component unmounts
+
+- Always use constants instead of directly using the string.
+
+## Start building the Browse page
 
 
 
