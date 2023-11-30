@@ -45,6 +45,18 @@ Next we will add a ``return`` to this useEffect to unsubscribe to the onAuthStat
 - embedded the youtube video and make it autoplay and mute
 - tailwind classes to make main container look awesome.
 
+## Building secondary container
+
+-  MovieList - popular
+- Movie lis - now playing
+- movie list - trending
+- movie list- top rated
+- build the movie list and movie card
+- added tmdb image cdn
+- made the browse page design with tailwind
+- added custom hooks
+
+
 
 
 
