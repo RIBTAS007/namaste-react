@@ -15,7 +15,7 @@ Next we will add a ``return`` to this useEffect to unsubscribe to the onAuthStat
 
 - Always use constants instead of directly using the string.
 
-## Start building the Browse page
+## Fetch movies from TMDB 
 
 - for showing movie list we will use the TMDB movie database.
 - register on TMDB website and get access token.
@@ -24,7 +24,10 @@ Next we will add a ``return`` to this useEffect to unsubscribe to the onAuthStat
 - in react index.js we wrapped the app inside strict mode. A lot of things happen twice in the local and will not happen in the build version.
 - it checks for inconsistencies between the calls and will throw an error during the rendering cycle.
 - once we setup and fetch the movies we will add ths movies in the redux store.
-- 
+- we will write custom hook to fetch the movies from tmdb api
+
+## 
+
 
 
 
