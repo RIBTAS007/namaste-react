@@ -26,7 +26,25 @@ Next we will add a ``return`` to this useEffect to unsubscribe to the onAuthStat
 - once we setup and fetch the movies we will add ths movies in the redux store.
 - we will write custom hook to fetch the movies from tmdb api
 
-## 
+## Building the browsing page.
+
+- UI is in 2 parts: main video part and then we have movie recommendation section.
+- main container
+    - videobackground
+    - VideoTitle
+- SceondaryConatiner
+    - movieList * n
+       - cards*n
+- we can use early return if the movie to be displayed in the background is not loaded yet.
+- we will keep the info of trailer info also in redux store instead of using a useState variable.
+- always write your hooks on the top.
+- create movie slice
+- updated the store with movies data
+- planning for main and secondary container
+- fetched data for trailer video data
+- embedded the youtube video and make it autoplay and mute
+- tailwind classes to make main container look awesome.
+
 
 
 
