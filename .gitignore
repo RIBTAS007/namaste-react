@@ -1,6 +1,6 @@
 /dist
 /.parcel-cache
-episode 15: NetflixGPT-BuildingTheCore/node_modules/
-episode 15: NetflixGPT-BuildingTheCore/.parcel-cache
-episode 15: NetflixGPT-BuildingTheCore/dist/
-episode 15: NetflixGPT-BuildingTheCore/coverage/
+netflix-gpt/node_modules/
+netflix-gpt/.parcel-cache
+netflix-gpt/dist/
+netflix-gpt/coverage/
