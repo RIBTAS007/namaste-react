@@ -4,12 +4,13 @@ export const LOGO_URL =
 export const USER_AVATAR =
   "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg";
 
+  console.log("Bearer " + process.env.REACT_APP_TMDB_KEY);
+
 export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMWZkNDFlYTY5NDEyMGNmNjhlYjYwN2RiMjlmMzYyYyIsInN1YiI6IjY1Njg2Zjc1OWFmZmMwMDE0ZThmMGM1OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mQY__-re8QLXZhLI3SnRsdSp_yQoGKNGvUDgaD2ab5M",
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
@@ -23,3 +24,5 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "hindi", name: "Hindi" },
   { identifier: "spanish", name: "Spanish" },
 ];
+
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;

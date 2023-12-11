@@ -4,3 +4,4 @@ netflix-gpt/node_modules/
 netflix-gpt/.parcel-cache
 netflix-gpt/dist/
 netflix-gpt/coverage/
+netflix-gpt/.env
