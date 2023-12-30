@@ -45,4 +45,13 @@
 - after this configure app.css for tailwind.
 - now run the app and see if tailwind is working properly or not.
 
-## 
+## Folder structure
+
+- Head
+- Body
+    - sidebar
+        - MenuItems
+    - main conatiner
+        - ButtonList
+        - VideoContainer
+            - videocard
