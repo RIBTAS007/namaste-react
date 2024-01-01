@@ -55,3 +55,27 @@
         - ButtonList
         - VideoContainer
             - videocard
+
+## Install redux
+
+- use `npm i @reduxjs/toolkit`
+- we also need react redux using `npm i react-redux`
+- create a redux store
+- create an app slice
+- add app slice to store
+- use provider to wrap the app component to give it access to the store.
+- check is the store is selected or not.
+- dispatch the action using useDispatch hook
+- use the useSelector hook to access variables from the store.
+- if(!isMenuOpen) return null; // this is called early return
+
+## Create video section
+
+- use youtube API to fetch videos info.
+- install react router dom to do the routing using npm i react-router-dom
+- create app router that takes array of paths as input.
+- then pass the approuter to the router provider
+- we then create outlet which is basically kind of an empty component in which we load the component that comes based on the routing path.
+- its basically to display the childrens present inside the app router.
+- we can use useSearchParams to get the video ids from the route URL.
+
