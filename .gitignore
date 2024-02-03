@@ -1,7 +1,2 @@
-/dist
-/.parcel-cache
-episode 19: WrappingUpYouTubeProject/node_modules/
-episode 19: WrappingUpYouTubeProject/.parcel-cache
-episode 19: WrappingUpYouTubeProject/dist/
-episode 19: WrappingUpYouTubeProject/coverage/
-episode 19: WrappingUpYouTubeProject/.env
+# dependencies
+/node_modules
