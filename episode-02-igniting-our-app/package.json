@@ -1,0 +1,33 @@
+{
+  "name": "episode-02-igniting-our-app",
+  "version": "1.0.0",
+  "description": "Learn fundamentals of creating a react app without using create-react-app",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RIBTAS007/namaste-react.git"
+  },
+  "keywords": [
+    "react",
+    "javascript",
+    "parcel",
+    "babel"
+  ],
+  "author": "Satbir Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RIBTAS007/namaste-react/issues"
+  },
+  "homepage": "https://github.com/RIBTAS007/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
