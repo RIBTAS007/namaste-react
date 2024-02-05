@@ -1,7 +1,6 @@
 // Q. create the following strcuture using react
 
-
-  /* <div id="parent">
+/* <div id="parent">
     <div id="child">
         <h1>
             Hi I am an h1 tag
@@ -17,16 +16,13 @@
 const parent = React.createElement(
   "div",
   { id: "parent" },
-  React.createElement(
-    "div",
-    { id: "child" },[
+  React.createElement("div", { id: "child" }, [
     React.createElement("h1", {}, "H1 Heading"),
     React.createElement("h2", {}, "H2 Heading"),
-  ]
-  )
+  ])
 );
 
-// Make sure you are using an Array when you want to have multiple children 
+// Make sure you are using an Array when you want to have multiple children
 
 console.log(parent);
 

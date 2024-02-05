@@ -58,7 +58,7 @@
 
 - **The most important operation is the DOM tree update.**
 - All frameworks try to optimize this process.
-- Check out [NestedDivUsingReact.js](./NestedDivUsingReact.js) file to see how we can create nested elements in React.
+- Check out [NestedDivUsingReact.js](./episode%2001%20%3A%20inception%20/NestedDivUsingReact.js) file to see how we can create nested elements in React.
 1. `React.createElement` returns an **object**.
 2. Then we pass this object to the `render()` whose job is to convert this object into the `h1` tag and then put it inside the root so that the browser understands it.
 - `ReactElement(object) => render => Browser(HTML)`
