@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Hello React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- "Cross-origin" refers to accessing resources from different websites. 
+    "Crossorigin" attribute in HTML specifies how browsers handle such requests securely. -->
+
+    <!-- the first script file contains the core react dev code  -->
+    <!-- the second file is for dom operations -->
+
+    <!-- We always need to keep our scripts in certain order. -->
+    <!-- first we will have react, then reactDOM and then the app script  -->
+    <!-- React CDN -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!-- React DOM CDN -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <!-- printing hello world using react  -->
+    <!-- <script src="./App.js"></script> -->
+    
+     <!-- printing a nested div using react  -->
+    <script src="./NestedDivUsingReact.js"></script>
+  </body>
+</html>
