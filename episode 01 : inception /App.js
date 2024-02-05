@@ -15,7 +15,7 @@ const heading = React.createElement(
 // all the react code will render under the root element
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// the render method is responsible for putting object inside h1 and rendering it.
+// the render method is responsible for conerting heading object into h1 tag and adding it to the root element in the DOM.
 
 // if we already have something inside the root div, it will be replaced by te below line.
 
