@@ -170,6 +170,8 @@ Remember to use the development version during development and switch to the pro
 
 ## What are arrow functions ?
 
+Arrow functions do not bind their own `this` value. Instead, they inherit `this` from the enclosing scope. This behavior is different from traditional functions, which have their own `this` value.
+
 ```JS
 function TraditionalFunction() {
     this.value = 1;

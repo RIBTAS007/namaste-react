@@ -22,7 +22,7 @@
 
 - Use the `<script>` tag to write JS code.
 - In JS, we use DOM Manipulation to create elements like headings, paragraphs, etc.
-- Check [helloWorldUsingHTMLandJS.html](./helloWorldUsingHTMLandJS.html) file to see how this can be done.
+- Check [helloWorldUsingHTMLandJS.html](./episode%2001%20:%20inception%20/helloWorldUsingHTMLandJS.html) file to see how this can be done.
 - Browsers have an inbuilt JS engine for understanding DOM elements.
 - **Note**: Browsers do not understand React by default as they understand JS.
 
@@ -48,7 +48,7 @@
 
 ## Using React to Write Hello World
 
-- You can check out [App.js](./App.js) file to see how we can create a React element.
+- You can check out [App.js](./episode%2001%20:%20inception%20/App.js) file to see how we can create a React element.
 - We first need to create a root where React can perform all the DOM operations.
 - Creating the element is the core thing in React.
 - Rendering something is the job of the DOM.
@@ -71,4 +71,8 @@
 - We didn't use React production CDN.
 - If something is already present in the root, and we render something, then it will be replaced.
 - React is an open-source frontend library, not a framework, as it can work only on a part of the page.
+
+## Assignment
+
+- [Click here](./Assignment01_Inception.md) for the assignment Questions and solutions
 
