@@ -152,3 +152,7 @@
 - React does not do everything.
 - It's the job of the bundler. Here we have used **Parcel**.
 - All this can be handled using **create-react-app**.
+
+## Assignment 02
+
+- [Click here](./Assignment02_IgnitingOurApp.md) for the assignment Questions and solutions
