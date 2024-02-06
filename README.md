@@ -34,7 +34,7 @@
     - Author: Satbir
     - License: ISC
 
-- Upon hitting enter and submitting, we will obtain the **package.json**, which is the configuration file for npm.
+- Upon hitting enter and submitting, we will obtain the [**package.json**](./episode-02-igniting-our-app/package.json), which is the configuration file for npm.
 
 ## Why Do We Need package.json
 
@@ -71,7 +71,7 @@
 
 ## package-lock.json
 
-- We will now get another file, **package-lock.json**.
+- We will now get another file, [**package-lock.json**](./episode-02-igniting-our-app/package-lock.json).
 - **package-lock.json** tracks the exact dependencies installed, whereas **package.json** contains approximate versions.
 - It also includes `integrity`, which contains a hash used to verify that the code on our dev machine and prod machine is the same.
 
